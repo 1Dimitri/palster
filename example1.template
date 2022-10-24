@@ -1,0 +1,18 @@
+Hello ${Env:UserName}
+This is a template executed on ${Env:Computername}
+
+Be careful with objects
+`$PSVersionTable will display:
+$PSVersionTable
+
+whereas `$PSVersionTable | Out-String 
+$($PSVersionTable | Out-String )
+
+You can do some calculation and tests
+
+This is a if example to test if you have regional settings set to en-US:
+
+$(if ($PSCulture -eq 'en-US') { "English (United States) regional settings"}
+else { "Something which is unamerican" }
+)
+It was created on $(Get-Date)
